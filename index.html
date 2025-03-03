@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Nama</title>
+    <style>
+        body {
+            text-align: center;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            margin-top: 100px;
+        }
+        .box {
+            display: inline-block;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        input {
+            padding: 5px;
+        }
+        button {
+            padding: 5px 10px;
+            background: cyan;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Form Nama</h1>
+    <div class="container">
+        <div class="box">
+            <label for="nama">Masukkan Nama Anda :</label>
+            <input type="text" id="nama" placeholder="Insert nama kamu">
+            <button onclick="cekNama()">Cek Nama!</button>
+        </div>
+    </div>
+
+    <script>
+        function cekNama() {
+            var nama = document.getElementById("nama").value;
+            if (nama.trim() === "") {
+                alert("Silakan masukkan nama!");
+            } else {
+                alert("Halo, " + nama + " !");
+            }
+        }
+    </script>
+
+</body>
+</html>
